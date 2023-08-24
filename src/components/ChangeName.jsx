@@ -9,7 +9,7 @@ const ChangeName = () => {
   return (
     <>
       <h1>Name is : {name}</h1>
-      <Btn press={changeName} />
+      {/* <Btn onPress={changeName} /> */}
       {/* onPress is a custom event in this case we pass it as a props  */}
     </>
   );
