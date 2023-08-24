@@ -34,7 +34,7 @@ const App = () => {
       {/* <App_1/> */}
 
       <Counter/>
-
+        <h1>Kain</h1>
     </div>
   );
 }
