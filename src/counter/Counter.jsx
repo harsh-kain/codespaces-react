@@ -4,11 +4,11 @@ const Counter = () => {
     const [count ,setCount] = useState(1);
 
     const increment = () =>{
-        let lcount = count
-        setCount(lcount + 1); // we have to pass (count + 1) or preIncrement otherwise it pass the value first then update after 
+        
+        setCount(count + 1); // we have to pass (count + 1) or preIncrement otherwise it pass the value first then update after 
     }
     const decrement = () =>{
-        let lcount = count
+        let lcount = count;
 
         setCount(lcount <= 0 ? 0 : lcount - 1);
     }
