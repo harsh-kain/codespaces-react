@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import Counter from "./Counter";
 const Totalcounter = () => {
-    const [counterstate , setcounterstate] = useState([
-        {id:1 , counts : 1},
-        {id:2 , counts : 2},
-        {id:3 , counts : 3},
-        {id:4 , counts : 4},
-    ]);
+  const [counterstate , setcounterstate] = useState([
+    {id : 1 , value : 1},
+    {id : 2 , value : 2},
+    {id : 3 , value : 3},
+    {id : 4 , value : 4},
+  ]);
+    //const [totalCounter , setTotalCounter] = useState(counterstate.length);
     const deleteElement = (id) =>{
       let updateVar = counterstate.filter((counter)=> counter.id !== id);
       setcounterstate(updateVar);
     }
+    
+
     
   return <>
     

@@ -1,16 +1,20 @@
 import "./App.css";
 import Btn from "./components/Btn";
+import Navbar from "./components/Navbar";
 import Counter from "./counter/Counter";
 import Totalcounter from "./counter/Totalcounter";
 // import ChangeName from "./components/ChangeName";
 const App = () => {
-  const eventBubble = () =>{
-    console.log("App");
-  }
+  
   return (
-    <div className="App" onClick={eventBubble}>
+    <>
+        
+      <Navbar/>
+      <div className="container-fluid bg-black text-bg-dark vh-100 d-flex flex-column justify-content-center align-items-center">
+
         <h1>Counter App</h1>
-        <Totalcounter/>
+        <Totalcounter />
+      </div>
 
 
 
@@ -26,7 +30,7 @@ const App = () => {
       {/* for building play and pause btn  */}
 
       {/* <Btn onPlay={()=>console.log("play..")} onPause={()=>console.log("pause..")}/> */}
-    </div>
+    </>
   );
 };
 
