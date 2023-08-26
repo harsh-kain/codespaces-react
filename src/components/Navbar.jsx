@@ -1,13 +1,14 @@
 import React from "react";
 
-const Navbar = ({totalCounter = 0}) => {
+const Navbar = ({acounter}) => {
+  // console.log(acounter);
   return (
     <>
       <div className="container-fluid">
         <nav className="navbar navbar navbar-expand-md bg-body-secondary fixed-top ">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              Navbar
+              Kain
             </a>
             <button
               className="navbar-toggler"
@@ -26,7 +27,7 @@ const Navbar = ({totalCounter = 0}) => {
                 
                 <li className="nav-item">
                   <a className="nav-link fw-bolder" href="#" >
-                    Total counter : {totalCounter}
+                    Total counter : {acounter}
                   </a>
                 </li>
                 

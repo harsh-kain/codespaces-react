@@ -1,28 +1,20 @@
 import React, { useState } from 'react'
 
-const Counter = ({count,onDelete}) => {// destructure of props 
+const Counter = ({count,onDelete,onIncrement, onDecrement}) => {// destructure of props 
     
-    const [countUpdate ,setcountUpdate] = useState(count.value); // pass object of count value 
+    // const [countUpdate ,setcountUpdate] = useState(count.value); // pass object of count value 
 
-    const increment = () =>{
-        
-        setcountUpdate(countUpdate + 1); // we have to pass (count + 1) or preIncrement otherwise it pass the value first then update after 
-    }
-    const decrement = () =>{
-        let lcount = countUpdate;
-
-        setcountUpdate(lcount <= 0 ? 0 : lcount - 1);
-    }
+    
 
   return (
     <>
 
         <div className="container my-4 d-flex justify-content-center align-items-center">
-            <button className='btn btn-outline-success btn-lg text-light' onClick={increment}>+</button>
+            <button className='btn btn-outline-success btn-lg text-light' onClick={()=>onIncrement(count)}>+</button>
 
-            <span className={countUpdate === 0 ? "px-4 mx-4 bg-danger rounded" : "px-4 mx-4 bg-success rounded"}>{countUpdate === 0 ? 'Zero' : countUpdate}</span>
+            <span className={count.value === 0 ? "px-4 mx-4 bg-danger rounded" : "px-4 mx-4 bg-success rounded"}>{count.value === 0 ? 'Zero' : count.value}</span>
 
-            <button className='btn btn-outline-success btn-lg text-light' onClick={decrement}>-</button>
+            <button className='btn btn-outline-success btn-lg text-light' onClick={()=>onDecrement(count)}>-</button>
 
             <button className='btn px-4 mx-4 bg-danger rounded' onClick={()=> onDelete(count.id)}>Delete</button>
 
@@ -32,4 +24,4 @@ const Counter = ({count,onDelete}) => {// destructure of props
   )
 }
 
-export default Counter
+export default Counter;

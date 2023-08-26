@@ -9,7 +9,6 @@ const App = () => {
   return (
     <>
         
-      <Navbar/>
       <div className="container-fluid bg-black text-bg-dark vh-100 d-flex flex-column justify-content-center align-items-center">
 
         <h1>Counter App</h1>
