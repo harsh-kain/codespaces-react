@@ -12,4 +12,3 @@ const App = () => {
 
 export default App;
 
-// component -> a function which return a value
